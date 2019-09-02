@@ -17,7 +17,7 @@ csvFile = open('fif.csv', 'a')
 #Use csv Writer
 csvWriter = csv.writer(csvFile)
 csvWriter.writerow(["date", "twee"])
-// Wrtie the topic you want to search in q and the set the count 
+# Wrtie the topic you want to search in q and the set the count 
 for tweet in tweepy.Cursor(api.search,q="#élection",count=1000,
                            lang="en",
                            since="2017-04-03").items():
