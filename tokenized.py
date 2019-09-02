@@ -59,27 +59,4 @@ for i in data.tweets:
     
     csvWriter.writerow([t])
     t=[]
-# after running the upper code  write the first name u entered in the open in fi and get results
-e=[]    
-fi=pd.read_csv("tweetsafterrr.csv")
-fi.rename(columns={"tweets after tokenization":"A"})  
-for i in fi.A:
-    print(i)
-    for word in i:
-        print(word)
-        e.append(s_stemmer.stem(word))
-
-
-
-tweet=pd.read_csv("tkelec.csv")
-import re
-
-
-tweet = re.sub(r':', '', tweet)
-tweet = re.sub(r'‚Ä¶', '', tweet)
-#replace consecutive non-ASCII characters with a space
-tweet = re.sub(r'[^\x00-\x7F]+',' ', tweet)
-#remove emojis from tweet
-tweet = emoji_pattern.sub(r'', tweet)
-
-
+# After running the above code you will get tokenized tweets
